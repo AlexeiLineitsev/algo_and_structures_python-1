@@ -3,3 +3,13 @@
 цифр и вывести на экран. Например, если введено число 3486,
  то надо вывести число 6843.
 """
+
+
+number = int(input('Ваше число = '))
+
+s = ''
+while number != 0:
+    digit = number % 10
+    number = int(number / 10)
+    s = s + str(digit)
+print(s)

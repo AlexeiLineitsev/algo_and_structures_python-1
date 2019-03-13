@@ -9,3 +9,33 @@
 Также сообщать пользователю о невозможности деления на ноль,
 если он ввел 0 в качестве делителя.
 """
+
+
+c = ''
+while c != '0':
+    k = False
+
+    while k != True and c != '0':
+        c = input('Знак операции или для выхода 0 - ')
+        if c == '0' or c == '+' or c == '-' or c == '*' or c == '/':
+            k = True
+        else:
+            print('Выберите что нибудь из этих знаков (0, +, -, *, /)')
+    del k
+
+    if c != '0':
+        a = int(input('a = '))
+        b = int(input('b = '))
+        # a = 5
+        # b = 5
+
+    if c == '+':
+        print('{} {} {} = {}'.format(a, c, b, a + b))
+    elif c == '-':
+        print('{} {} {} = {}'.format(a, c, b, a - b))
+    elif c == '*':
+        print('{} {} {} = {}'.format(a, c, b, a * b))
+    elif c == '/':
+        while b == 0:
+            b = int(input('На ноль делить нельзя задайте другое число - '))
+        print('{} {} {} = {}'.format(a, c, b, a / b))
