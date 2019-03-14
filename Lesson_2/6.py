@@ -5,3 +5,33 @@
 число, чем то, что загадано. Если за 10 попыток число не отгадано,
 то вывести загаданное число.
 """
+
+import random
+
+def ranf(number,i):
+    i -= 1
+    if i >= 0:
+        number_ = int(input('Ваше число - '))
+        if number == number_:
+            return 'Вы счастливчик угадали с {} попытки'.format(10 - i)
+        else:
+            if number_ > number:
+                print('Загаданное число меньше')
+            else:
+                print('Загаданное число больше')
+        ranf(number, i)
+    return 'Загаданное число - {}'.format(number)
+
+
+
+
+
+
+
+
+
+
+number = random.randint(0,100)
+i = 10
+
+print(ranf(number,i))
