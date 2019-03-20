@@ -4,3 +4,19 @@
 записывать ее в последнюю ячейку строки.
 В конце следует вывести полученную матрицу.
 """
+N = 5
+M = 4
+
+a = []
+
+for i in range(N):
+    b = []
+    b = input('Введите элементы матрицы, 3 числа через пробел  ').split()
+    b = [int(i) for i in b]
+    b.append(sum(b))
+    a.append(b)
+
+for i in range(N):
+    for j in range(M):
+        print(a[i][j], end='  ')
+    print()

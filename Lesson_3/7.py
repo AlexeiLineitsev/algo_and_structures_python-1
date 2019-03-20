@@ -3,3 +3,22 @@
 Они могут быть как равны между собой (оба являться минимальными),
  так и различаться.
 """
+
+def find_2_min_in_list(a):
+    min_a = a[0]
+    previos_min = a[0]
+
+    for i in a:
+        if min_a >= i:
+            previos_min = min_a
+            min_a = i
+    return [previos_min, min_a]
+
+
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9, -1]
+
+b = find_2_min_in_list(a)
+
+print('Найти два наименьших элемента в массиве ', a)
+print('Два наименьших', b[0], b[1])
+
